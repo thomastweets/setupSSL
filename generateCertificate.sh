@@ -49,7 +49,7 @@ for cert in $rootCerts
 do
   if [ ! -d "$certFolder/$cert" ]; then
     printStep "Downloading $startssl_certs$cert to _certs folder..."
-    curl -o "$certFolder/$cert" "startssl_certs$cert"
+    curl -o "$certFolder/$cert" "$startssl_certs$cert"
   fi
 done
 
