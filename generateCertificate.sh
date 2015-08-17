@@ -78,10 +78,10 @@ if hash pbcopy 2>/dev/null; then
   printStep "Copying certificate request file to clipboard"
   cat $domain/$domain"_csr.pem" | pbcopy
   printStep "...done!"
-  echo -e $domain/$domain"_csr.pem"
+  cat $domain/$domain"_csr.pem"
 else
   printStep "Printing certificate request file: "
-  echo -e $domain/$domain"_csr.pem"
+  cat $domain/$domain"_csr.pem"
   printStep "\nPlease copy this to your clipboard!"
 fi
 
